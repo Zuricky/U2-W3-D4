@@ -1,4 +1,5 @@
 const imageContainer = document.querySelector(".album .container .row");
+const searchForm = document.getElementById("searchForm");
 
 async function fetchImages(query) {
   const resp = await fetch(`https://api.pexels.com/v1/search?query=${query}`, {
