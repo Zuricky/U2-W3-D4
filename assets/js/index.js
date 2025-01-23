@@ -2,10 +2,10 @@ const imageContainer = document.querySelector(".album .container .row");
 const searchForm = document.getElementById("searchForm");
 
 async function fetchImages(query) {
-  const resp = await fetch(`https://api.pexels.com/v1/search?query=${query}`, {
+  const response = await fetch(`https://api.pexels.com/v1/search?query=${query}`, {
     headers: { Authorization: "6VZvPQnkMeL9P1PLsVIWad0GYZwqkJE9ddUuURTY3OVq6DZzZWEQTMfv" },
   });
-  const data = await resp.json();
+  const data = await response.json();
   displayImages(data.photos);
 }
 

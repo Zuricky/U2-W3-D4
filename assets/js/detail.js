@@ -6,6 +6,7 @@ console.log("Resource ID", imageId);
 
 async function fetchImageDetails() {
   const response = await fetch(`https://api.pexels.com/v1/photos/${imageId}`, {
+    method: "GET",
     headers: { Authorization: "6VZvPQnkMeL9P1PLsVIWad0GYZwqkJE9ddUuURTY3OVq6DZzZWEQTMfv" },
   });
   const photo = await response.json();
